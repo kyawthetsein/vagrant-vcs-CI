@@ -9,7 +9,7 @@ fi
 
 cd vagrant
 #git checkout refs/tags/v1.8.1
-gem install net-ssh -v '3.0.2
+gem install net-ssh -v '3.0.2'
 bundle install
 rake install
 
