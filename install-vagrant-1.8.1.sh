@@ -4,10 +4,10 @@ set -x
 set -e
 
 if [ ! -e vagrant ]; then
-  apt-get install vagrant1.8.1
+  apt-get install vagrant 1.8.1
 fi
 
-cd vagrant
+#cd vagrant
 #git checkout refs/tags/v1.8.1
 #gem install net-ssh -v '3.0.2'
 #bundle install
