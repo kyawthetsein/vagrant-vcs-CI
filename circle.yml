@@ -9,7 +9,7 @@ dependencies:
 test:
   pre:
     - vagrant up remote --provider=aws:
-        timeout: 600
+        timeout: 1200
     - VAGRANT_INSTALLER_ENV=1 vagrant ssh-config remote --host=vagrant-vcs > vagrant_ssh_config
   post:  
     - vagrant destroy remote -f
