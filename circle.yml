@@ -1,7 +1,7 @@
 dependencies:
   cache_directories:
     - vagrant
-    - ~/.vagrant.d
+    - .vagrant.d
   pre:
     - bash ./install-vagrant-1.8.1.sh
 
