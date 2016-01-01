@@ -3,7 +3,7 @@ dependencies:
     - vagrant
     
   pre:
-    - bash ./install-vagrant-1.8.1.sh
+    - bash ./install-vagrant-1.7.4.sh
 
 test:
   pre:
