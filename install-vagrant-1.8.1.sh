@@ -4,14 +4,14 @@ set -x
 set -e
 
 if [ ! -e vagrant ]; then
-  git clone git@github.com:mitchellh/vagrant.git
+  apt-get install vagrant1.8.1
 fi
 
 cd vagrant
 #git checkout refs/tags/v1.8.1
-gem install net-ssh -v '3.0.2'
-bundle install
-rake install
+#gem install net-ssh -v '3.0.2'
+#bundle install
+#rake install
 
 if [ ! -e ~/.vagrant.d ]; then
   vagrant plugin install vagrant-aws
