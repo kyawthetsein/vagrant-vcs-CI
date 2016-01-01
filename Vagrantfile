@@ -5,11 +5,10 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "ubuntu/ubuntu-15.04-snappy-core-stable"
-# config.vm.box_url = "https://atlas.hashicorp.com/ubuntu/boxes/ubuntu-15.04-snappy-core-stable"
+  config.vm.box = "ubuntu/trusty64"
 
   config.vm.define :local do |local|
-    local.vm.box = "ubuntu/ubuntu-15.04-snappy-core-stable"
+    local.vm.box = "ubuntu/trusty64"
     local.vm.hostname = "vagrant-vcs"
   end
 
