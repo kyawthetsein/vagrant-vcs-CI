@@ -24,12 +24,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       aws.region = "us-west-2"
 
       ## Private AMI: Amazon Linux + enable tty-less sudo
-      aws.ami = "ami-df4320de"
+      aws.ami = "ami-5189a661"
 
       aws.security_groups = [ 'default' ]
       aws.tags = { 'Name' => 'vagrant-vcs' }
 
-      override.ssh.username = "ec2-user"
+      override.ssh.username = "ubuntu"
 
       ## This private key is configured on CircleCI
       override.ssh.private_key_path = ENV['AWS_SSH_KEY_PATH']
