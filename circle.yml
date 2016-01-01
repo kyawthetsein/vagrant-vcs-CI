@@ -1,6 +1,7 @@
 dependencies:
   cache_directories:
     - vagrant
+    - ~/.vagrant.d
     
   pre:
     - bash ./install-vagrant-1.7.4.sh
@@ -8,6 +9,7 @@ dependencies:
 test:
   pre:
     - vagrant up remote --provider=aws:
-        timeout: 1200
-  #  - VAGRANT_INSTALLER_ENV=1 vagrant ssh-config remote --host=vagrant-vcs > vagrant_ssh_config
+        timeout: 600
+    - VAGRANT_INSTALLER_ENV=1 vagrant ssh-config remote --host=vagrant-vcs > vagrant_ssh_config
+  post:  
     - vagrant destroy remote -f
