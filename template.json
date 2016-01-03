@@ -1,0 +1,19 @@
+"builders": [
+    {
+      "type": "amazon-ebs",
+      ...
+    }
+],
+"provisioners": [
+    {
+      "type": "puppet-masterless",
+      ...
+    }
+],
+"post-processors": [
+    {
+      "type": "atlas",
+      "artifact": "hashicorp/logstream",
+      "artifact_type": "amazon.ami"
+    }
+]
