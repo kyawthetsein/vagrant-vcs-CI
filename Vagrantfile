@@ -35,4 +35,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       override.ssh.private_key_path = ENV['AWS_SSH_KEY_PATH']
     end
   end
+  config.push.define "atlas" do |push|
+    push.app = "kyawthetsein/vagrant-vcs-CI"
+  end
 end
